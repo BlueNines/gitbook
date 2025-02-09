@@ -20,6 +20,10 @@ if %errorlevel% neq 0 (
     exit
 )
 
+for /f "tokens=1" %%v in ('node -v') do set NODE_VERSION=%%v
+echo 当前 Node.js 版本: %NODE_VERSION%
+echo 推荐使用 Node.js 18.17 或更高版本
+
 echo 清理并重新安装依赖...
 if exist node_modules (
     rd /s /q node_modules
@@ -28,10 +32,10 @@ if exist package-lock.json (
     del package-lock.json
 )
 
-call npm install
+call npm install --legacy-peer-deps
 
 echo 启动文档服务...
 echo 服务启动后请访问: http://localhost:4000
-call npx honkit serve
+call npm run serve
 
 pause 
