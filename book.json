@@ -1,0 +1,23 @@
+{
+    "title": "插件文档",
+    "description": "Minecraft 插件文档中心",
+    "author": "Your Name",
+    "language": "zh-hans",
+    "plugins": [
+        "expandable-chapters-small",
+        "flexible-alerts"
+    ],
+    "pluginsConfig": {
+        "flexible-alerts": {
+            "style": "callout",
+            "comment": {
+                "label": "Comment",
+                "icon": "fa fa-comments",
+                "className": "info"
+            }
+        }
+    },
+    "styles": {
+        "website": "styles/website.css"
+    }
+} 
