@@ -10,8 +10,8 @@ yarn-debug.log*
 yarn-error.log*
 
 # 包管理器文件
-# package.json
-# package-lock.json
+package.json
+package-lock.json
 
 # 系统文件
 .DS_Store
