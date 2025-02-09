@@ -9,10 +9,6 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# 包管理器文件
-package.json
-package-lock.json
-
 # 系统文件
 .DS_Store
 Thumbs.db 
