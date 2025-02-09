@@ -4,17 +4,12 @@
     "author": "Your Name",
     "language": "zh-hans",
     "plugins": [
-        "expandable-chapters-small",
-        "flexible-alerts"
+        "chapter-fold",
+        "alerts"
     ],
     "pluginsConfig": {
-        "flexible-alerts": {
-            "style": "callout",
-            "comment": {
-                "label": "Comment",
-                "icon": "fa fa-comments",
-                "className": "info"
-            }
+        "theme-default": {
+            "showLevel": true
         }
     },
     "styles": {
