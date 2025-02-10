@@ -1,0 +1,720 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <title>配置说明 · 插件文档</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 4.0.8">
+        <meta name="author" content="Your Name">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../../requirement/server.html" />
+    
+    
+    <link rel="prev" href="command.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    首页
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../nav.html">
+            
+                <a href="../nav.html">
+            
+                    
+                        <b>1.2.</b>
+                    
+                    插件导航
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">插件文档</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                        <b>2.1.</b>
+                    
+                    WorldTrashCan
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="command.html">
+            
+                <a href="command.html">
+            
+                    
+                        <b>2.1.1.</b>
+                    
+                    指令说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.1.2" data-path="config.html">
+            
+                <a href="config.html">
+            
+                    
+                        <b>2.1.2.</b>
+                    
+                    配置说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">环境要求</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../../requirement/server.html">
+            
+                <a href="../../requirement/server.html">
+            
+                    
+                        <b>3.1.</b>
+                    
+                    服务端要求
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../../requirement/dependencies.html">
+            
+                <a href="../../requirement/dependencies.html">
+            
+                    
+                        <b>3.2.</b>
+                    
+                    前置插件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            本书使用 HonKit 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >配置说明</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="配置版本">配置版本</h1>
+<p>6.0.0</p>
+<h1 id="配置说明">配置说明</h1>
+<h2 id="configyml">config.yml</h2>
+<pre><code class="lang-yaml"><span class="hljs-comment"># 5.1.5配置文件小更新：</span>
+<span class="hljs-comment"># 调整了个人垃圾桶的配置位置，加入了新的参数，如果你的配置文件是从版本小于5.1.5搬运而来，请最好重新生成一份配置文件，后果自负</span>
+
+<span class="hljs-comment">#如果你使用的是1.16.5以上支持RGB颜色的服务器</span>
+<span class="hljs-comment">#以下的所有带字符串的配置均可设置为RGB颜色</span>
+<span class="hljs-comment">#格式为   &amp;#FFB5C5 I am RGBColor</span>
+
+<span class="hljs-comment"># 所有功能Flag开关解释：</span>
+<span class="hljs-comment"># true为启用，  false为禁用</span>
+
+
+<span class="hljs-comment"># 请在群内问问题时分清楚以下内容</span>
+<span class="hljs-comment"># 1.个人垃圾桶（又称私人垃圾桶）: 每个玩家独立的垃圾桶</span>
+<span class="hljs-comment"># 2.世界垃圾桶（又称家园垃圾桶）：玩家创建的，独立于世界的垃圾桶，每次清理垃圾时会将该世界的垃圾放到该世界的世界垃圾桶里</span>
+<span class="hljs-comment"># 3.公共垃圾桶（又称全局垃圾桶）：所有世界互通的全局垃圾桶，当玩家的个人垃圾桶或任意一个世界垃圾桶塞不下时、会转移到公共垃圾桶里</span>
+
+<span class="hljs-comment"># 插件采用单例模式控制监听器, 所有选项支持使用/wtc reload指令重载</span>
+
+<span class="hljs-comment"># 5.7.2版本之后可用%WTC_ClearTime%变量查看距离下一次清理垃圾的时间</span>
+<span class="hljs-comment"># papi指令/papi parse --null %WTC_ClearTime%</span>
+
+<span class="hljs-comment"># 留空符号是[] ，而不是简单的删除所有内容！</span>
+<span class="hljs-attr">Set:</span>
+  <span class="hljs-attr">Debug:</span> <span class="hljs-literal">false</span>
+  <span class="hljs-attr">Lang:</span> <span class="hljs-string">message_zh.yml</span>
+  <span class="hljs-comment">#公共垃圾桶(当世界垃圾溢出来的物品会进入该垃圾桶)</span>
+  <span class="hljs-attr">GlobalTrash:</span>
+    <span class="hljs-comment">#这里可以彻底关闭这个功能的任何检查，与其他插件不同，这里的关闭是直接从服务器内部注销了监听器，是彻彻底底的关闭，想重新打开该功能只需重载也无需重启，重载即可，如果你不需要它的话，关闭后不会占用任何性能</span>
+    <span class="hljs-attr">Flag:</span> <span class="hljs-literal">true</span>
+    <span class="hljs-comment">#公共垃圾桶最大页数</span>
+    <span class="hljs-attr">MaxPage:</span> <span class="hljs-number">5</span>
+    <span class="hljs-comment">#在每N次扫地时，先清理公共垃圾桶内原有物品，后再将物品加入公共垃圾桶</span>
+    <span class="hljs-comment">#如果下面的数是3，则在三次扫地之后，自动清理公共垃圾桶</span>
+    <span class="hljs-comment">#如果为-1，则不会清理公共垃圾桶</span>
+    <span class="hljs-attr">EveryClearGlobalTrash:</span> <span class="hljs-number">3</span>
+  <span class="hljs-comment">#每次执行的垃圾清理的间隔</span>
+  <span class="hljs-attr">SecondCount:</span> <span class="hljs-number">360</span>
+  <span class="hljs-comment">#如果你想关闭这个功能，可以在权限组插件中禁用默认自带的WorldTrashCan.Main权限，玩家就无法创建世界垃圾桶了</span>
+  <span class="hljs-comment">#玩家创建垃圾桶需要输入的字段</span>
+  <span class="hljs-attr">SighCheckName:</span> <span class="hljs-string">"[世界垃圾桶]"</span>
+  <span class="hljs-comment">#创建垃圾桶成功后替换的字段</span>
+  <span class="hljs-comment">#这里在插件4.9.0版本过后就可以使用RGB颜色了！</span>
+  <span class="hljs-comment">#注意。只能在1.16.5以上版本使用RGB颜色，请勿在1.16.5以下使用，可能会导致世界垃圾桶无法正常检查字段</span>
+  <span class="hljs-attr">SighCheckedName:</span> <span class="hljs-string">"&amp;b[&amp;c世界垃圾桶&amp;b]"</span>
+  <span class="hljs-comment">#包含以下物品类型的（用wtc look也可以查看手持物品类型）</span>
+  <span class="hljs-attr">NoClearContainerType:</span>
+    <span class="hljs-comment">#以下物品不会进行任何处理(不会被清理，放入垃圾桶)</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-string">"DIAMOND"</span>
+  <span class="hljs-comment">#包含以下任意一行lore的物品不处理</span>
+  <span class="hljs-attr">NoClearContainerLore:</span>
+    <span class="hljs-comment">#防止QS商店的悬浮物被处理进垃圾桶</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-string">"shopLocation"</span>
+  <span class="hljs-attr">ClearEntity:</span>
+    <span class="hljs-comment">#是否同时清理实体</span>
+    <span class="hljs-comment">#这里可以彻底关闭这个功能的任何检查，与其他插件不同，这里的关闭是直接从服务器内部注销了监听器，是彻彻底底的关闭，想重新打开该功能只需重载也无需重启，重载即可，如果你不需要它的话，关闭后不会占用任何性能</span>
+    <span class="hljs-attr">Flag:</span> <span class="hljs-literal">true</span>
+    <span class="hljs-comment"># 是否清理经验球</span>
+    <span class="hljs-attr">ClearExpBottle:</span> <span class="hljs-literal">true</span>
+    <span class="hljs-comment">#是否清理怪物</span>
+    <span class="hljs-attr">ClearMonster:</span> <span class="hljs-literal">true</span>
+    <span class="hljs-comment">#是否清理动物</span>
+    <span class="hljs-comment">#村民在不同版本中可能属于动物，可能不属于动物，如果你想特别清理村民，请移除白名单后加入黑名单</span>
+    <span class="hljs-attr">ClearAnimals:</span> <span class="hljs-literal">false</span>
+    <span class="hljs-comment">#是否清理被命名过的生物</span>
+    <span class="hljs-attr">ClearReNameEntity:</span> <span class="hljs-literal">false</span>
+    <span class="hljs-comment">#如果在以下名单内，不会清理（白名单）</span>
+    <span class="hljs-attr">WhiteNameList:</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-string">VILLAGER</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-string">WITHER</span>
+    <span class="hljs-comment">#如果在以下名单内，会清理（黑名单）</span>
+    <span class="hljs-attr">BlackNameList:</span>
+      <span class="hljs-comment">#这是拔刀剑的刀挂台以及拔刀的实体</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-string">FLAMMPFEIL.SLASHBLADE_BLADESTAND</span>
+
+  <span class="hljs-comment">#仙人掌，岩浆触碰到的物品的处理</span>
+  <span class="hljs-attr">PersonalTrashCan:</span>
+    <span class="hljs-comment">#这里可以彻底关闭这个功能的任何检查，与其他插件不同，这里的关闭是直接从服务器内部注销了监听器，是彻彻底底的关闭，想重新打开该功能只需重载也无需重启，重载即可，如果你不需要它的话，关闭后不会占用任何性能</span>
+    <span class="hljs-attr">Flag:</span> <span class="hljs-literal">true</span>
+    <span class="hljs-attr">OriginalFeatureClearItemAddGlobalTrash:</span>
+      <span class="hljs-comment">#模式1：将丢进仙人掌，岩浆后被删除的物品(Delay秒内)直接装入公共垃圾桶  [作者推荐]</span>
+      <span class="hljs-comment">#模式2：将丢进仙人掌，岩浆后被删除的物品(Delay秒内)装入个人独立的垃圾桶("个人垃圾桶")（类似于这类物品的特殊垃圾桶）  [群友要求]</span>
+      <span class="hljs-comment">#模式3：对这类丢进仙人掌，岩浆，岩浆后被删除的物品(五秒内)，不处理（关闭该功能）</span>
+      <span class="hljs-attr">UseModel:</span> <span class="hljs-number">3</span>
+      <span class="hljs-comment">#玩家丢在地上的物品超过以下Delay设置的时间，就算丢进仙人掌，岩浆后，也不会被处理(防止卡顿)</span>
+      <span class="hljs-attr">Delay:</span> <span class="hljs-number">6</span>
+      <span class="hljs-attr">Model2:</span>
+        <span class="hljs-comment">#若"个人垃圾桶"满了，是否自动清理</span>
+        <span class="hljs-attr">AutoClear:</span> <span class="hljs-literal">true</span>
+        <span class="hljs-comment">#如果使用了Vault以及它的经济插件，可以在下面设置玩家从个人垃圾桶中 取出垃圾所要花费的金币</span>
+        <span class="hljs-comment">#如果没使用Vault以及它的经济插件或者不想使用扣费功能，请在下面填-1以禁用</span>
+<span class="hljs-comment">#        Coins: 10.0</span>
+        <span class="hljs-attr">Coins:</span> <span class="hljs-number">-1</span>
+
+    <span class="hljs-comment"># 对玩家丢弃的物品进行处理，使用条件：服务器版本＞1.14 否则下面选项无效</span>
+    <span class="hljs-comment"># 当玩家所处世界没有世界垃圾桶时。玩家主动丢弃的物品是否优先进入个人垃圾桶，其次才进入公共垃圾桶</span>
+    <span class="hljs-comment"># 这里填false则玩家主动丢弃的物品不会优先进入个人垃圾桶</span>
+    <span class="hljs-attr">NoWorldTrashCanEnterPersonalTrashCan:</span> <span class="hljs-literal">false</span>
+
+
+  <span class="hljs-comment"># 支持的所有bossbar颜色</span>
+  <span class="hljs-comment">#    PINK,</span>
+  <span class="hljs-comment">#    BLUE,</span>
+  <span class="hljs-comment">#    RED,</span>
+  <span class="hljs-comment">#    GREEN,</span>
+  <span class="hljs-comment">#    YELLOW,</span>
+  <span class="hljs-comment">#    PURPLE,</span>
+  <span class="hljs-comment">#    WHITE;</span>
+  <span class="hljs-comment"># 支持的所有bossbar类型</span>
+  <span class="hljs-comment">#    SOLID,</span>
+  <span class="hljs-comment">#    SEGMENTED_6,</span>
+  <span class="hljs-comment">#    SEGMENTED_10,</span>
+  <span class="hljs-comment">#    SEGMENTED_12,</span>
+  <span class="hljs-comment">#    SEGMENTED_20;</span>
+  <span class="hljs-attr">BossBarFlag:</span> <span class="hljs-literal">false</span>
+  <span class="hljs-comment">#当读秒到达以下数字时会进行一次信息的发送   如  &amp;d&amp;l还剩下 60 秒清理物品和实体</span>
+  <span class="hljs-comment">#%DealItemSum%为处理的物品总数（包括回收进任意垃圾桶的也包括被清理的）</span>
+  <span class="hljs-comment">#%GlobalTrashAddSum%为进入公共垃圾桶的物品总数</span>
+  <span class="hljs-attr">BossBarMessageForCount:</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-number">30</span><span class="hljs-string">;&amp;d&amp;l即将清理物品和实体;SOLID;RED</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-number">29</span><span class="hljs-string">;&amp;d&amp;l即将清理物品和实体;SOLID;YELLOW</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-number">28</span><span class="hljs-string">;&amp;d&amp;l即将清理物品和实体;SOLID;GREEN</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-number">27</span><span class="hljs-string">;&amp;d&amp;l即将清理物品和实体;SOLID;BLUE</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-number">26</span><span class="hljs-string">;&amp;d&amp;l即将清理物品和实体;SOLID;PINK</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-number">25</span><span class="hljs-string">;&amp;d&amp;l即将清理物品和实体;SOLID;PURPLE</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-number">24</span><span class="hljs-string">;&amp;d&amp;l即将清理物品和实体;SOLID;WHITE</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-number">23</span><span class="hljs-string">;&amp;d&amp;l即将清理物品和实体;SEGMENTED_6;RED</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-number">22</span><span class="hljs-string">;&amp;d&amp;l即将清理物品和实体;SEGMENTED_6;YELLOW</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-number">21</span><span class="hljs-string">;&amp;d&amp;l即将清理物品和实体;SEGMENTED_6;GREEN</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-number">20</span><span class="hljs-string">;&amp;d&amp;l即将清理物品和实体;SEGMENTED_6;BLUE</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-number">19</span><span class="hljs-string">;&amp;d&amp;l即将清理物品和实体;SEGMENTED_6;PINK</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-number">18</span><span class="hljs-string">;&amp;d&amp;l即将清理物品和实体;SEGMENTED_6;PURPLE</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-number">17</span><span class="hljs-string">;&amp;d&amp;l即将清理物品和实体;SEGMENTED_6;WHITE</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-number">16</span><span class="hljs-string">;&amp;d&amp;l即将清理物品和实体;SEGMENTED_10;RED</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-number">15</span><span class="hljs-string">;&amp;d&amp;l即将清理物品和实体;SEGMENTED_10;YELLOW</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-number">14</span><span class="hljs-string">;&amp;d&amp;l即将清理物品和实体;SEGMENTED_10;GREEN</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-number">13</span><span class="hljs-string">;&amp;d&amp;l即将清理物品和实体;SEGMENTED_10;BLUE</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-number">12</span><span class="hljs-string">;&amp;d&amp;l即将清理物品和实体;SEGMENTED_10;PINK</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-number">11</span><span class="hljs-string">;&amp;d&amp;l即将清理物品和实体;SEGMENTED_10;PURPLE</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-number">10</span><span class="hljs-string">;&amp;d&amp;l即将清理物品和实体;SEGMENTED_10;WHITE</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-number">9</span><span class="hljs-string">;&amp;d&amp;l即将清理物品和实体;SEGMENTED_12;RED</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-number">8</span><span class="hljs-string">;&amp;d&amp;l即将清理物品和实体;SEGMENTED_12;YELLOW</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-number">7</span><span class="hljs-string">;&amp;d&amp;l即将清理物品和实体;SEGMENTED_12;GREEN</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-number">6</span><span class="hljs-string">;&amp;d&amp;l即将清理物品和实体;SEGMENTED_12;BLUE</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-number">5</span><span class="hljs-string">;&amp;d&amp;l即将清理物品和实体;SEGMENTED_12;PINK</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-number">4</span><span class="hljs-string">;&amp;d&amp;l即将清理物品和实体;SEGMENTED_12;PURPLE</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-number">3</span><span class="hljs-string">;&amp;d&amp;l即将清理物品和实体;SEGMENTED_20;WHITE</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-number">2</span><span class="hljs-string">;&amp;d&amp;l即将清理物品和实体;SEGMENTED_20;RED</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-number">1</span><span class="hljs-string">;&amp;d&amp;l即将清理物品和实体;SEGMENTED_20;YELLOW</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-number">0</span><span class="hljs-string">;&amp;a清理成功，有%GlobalTrashAddSum%个物品加入了公共垃圾桶，有%EntitySum%个生物被清理;SEGMENTED_20;GREEN</span>
+    <span class="hljs-comment">#-1和-2是设置清理公共垃圾桶时的提醒，如果本次没有清理公共垃圾桶，则输出-1的提醒，如果本次清理公共垃圾桶，则输出-2的提醒</span>
+    <span class="hljs-comment">#该提醒是在清理垃圾后，延迟2秒发送的提醒</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-number">-1</span><span class="hljs-string">;&amp;d还有%ClearGlobalCount%次清理，公共垃圾桶;SEGMENTED_20;GREEN</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-number">-2</span><span class="hljs-string">;&amp;a公共垃圾桶的物品已刷新;SEGMENTED_20;GREEN</span>
+
+  <span class="hljs-comment">#是否启用ActionBar的提示方式(经验条上面的提示字)</span>
+  <span class="hljs-comment">#ActionBar 也支持使用RGB（版本1.16.5+）</span>
+  <span class="hljs-attr">ActionBarFlag:</span> <span class="hljs-literal">true</span>
+  <span class="hljs-comment">#当读秒到达以下数字时会进行一次信息的发送   如  &amp;d&amp;l还剩下 60 秒清理物品和实体</span>
+  <span class="hljs-comment">#%DealItemSum%为处理的物品总数（包括回收进任意垃圾桶的也包括被清理的）</span>
+  <span class="hljs-comment">#%GlobalTrashAddSum%为进入公共垃圾桶的物品总数</span>
+  <span class="hljs-attr">ActionBarMessageForCount:</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-number">60</span><span class="hljs-string">;&amp;d&amp;l还剩下</span> <span class="hljs-number">60</span> <span class="hljs-string">秒清理物品和实体</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-number">30</span><span class="hljs-string">;&amp;d&amp;l还剩下</span> <span class="hljs-number">30</span> <span class="hljs-string">秒清理物品和实体</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-number">10</span><span class="hljs-string">;&amp;d&amp;l还剩下</span> <span class="hljs-number">10</span> <span class="hljs-string">秒清理物品和实体</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-number">5</span><span class="hljs-string">;&amp;c&amp;l5秒</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-number">3</span><span class="hljs-string">;&amp;c&amp;l3秒</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-number">2</span><span class="hljs-string">;&amp;c&amp;l2秒</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-number">1</span><span class="hljs-string">;&amp;c&amp;l1秒</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-number">0</span><span class="hljs-string">;&amp;a清理成功，有%GlobalTrashAddSum%个物品加入了公共垃圾桶，有%EntitySum%个生物被清理</span>
+    <span class="hljs-comment">#-1和-2是设置清理公共垃圾桶时的提醒，如果本次没有清理公共垃圾桶，则输出-1的提醒，如果本次清理公共垃圾桶，则输出-2的提醒</span>
+    <span class="hljs-comment">#该提醒是在清理垃圾后，延迟2秒发送的提醒</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-number">-1</span><span class="hljs-string">;&amp;d还有%ClearGlobalCount%次清理，公共垃圾桶</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-number">-2</span><span class="hljs-string">;&amp;a公共垃圾桶的物品已刷新</span>
+
+  <span class="hljs-comment">#是否启用Title的提示方式</span>
+  <span class="hljs-attr">TitleFlag:</span> <span class="hljs-literal">false</span>
+  <span class="hljs-comment">#当读秒到达以下数字时会进行一次信息的发送   如  &amp;d&amp;l还剩下 60 秒清理物品和实体</span>
+  <span class="hljs-comment">#%DealItemSum%为处理的物品总数（包括回收进任意垃圾桶的也包括被清理的）</span>
+  <span class="hljs-comment">#%GlobalTrashAddSum%为进入公共垃圾桶的物品总数</span>
+  <span class="hljs-attr">TitleMessageForCount:</span>
+    <span class="hljs-comment">#这里多了一个;是因为前一个是大标题，后一个是小标题</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-number">60</span><span class="hljs-string">;&amp;d还剩下</span> <span class="hljs-number">60</span> <span class="hljs-string">秒;清理物品和实体</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-number">30</span><span class="hljs-string">;&amp;d还剩下</span> <span class="hljs-number">30</span> <span class="hljs-string">秒;清理物品和实体</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-number">10</span><span class="hljs-string">;&amp;d还剩下</span> <span class="hljs-number">10</span> <span class="hljs-string">秒;清理物品和实体</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-number">5</span><span class="hljs-string">;&amp;c5秒</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-number">3</span><span class="hljs-string">;&amp;c3秒</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-number">2</span><span class="hljs-string">;&amp;c2秒</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-number">1</span><span class="hljs-string">;&amp;c1秒</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-number">0</span><span class="hljs-string">;&amp;a清理成功;有%GlobalTrashAddSum%个物品加入了公共垃圾桶，有%EntitySum%个生物被清理</span>
+    <span class="hljs-comment">#-1和-2是设置清理公共垃圾桶时的提醒，如果本次没有清理公共垃圾桶，则输出-1的提醒，如果本次清理公共垃圾桶，则输出-2的提醒</span>
+    <span class="hljs-comment">#该提醒是在清理垃圾后，延迟2秒发送的提醒</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-number">-1</span><span class="hljs-string">;&amp;d还有%ClearGlobalCount%次清理，公共垃圾桶</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-number">-2</span><span class="hljs-string">;&amp;a公共垃圾桶的物品已刷新</span>
+
+  <span class="hljs-comment">#是否启用聊天栏的提示方式</span>
+  <span class="hljs-attr">ChatFlag:</span> <span class="hljs-literal">true</span>
+  <span class="hljs-comment">#当读秒到达以下数字时会进行一次信息的发送   如  &amp;d&amp;l还剩下 60 秒清理物品和实体</span>
+  <span class="hljs-comment">#%DealItemSum%为处理的物品总数（包括回收进任意垃圾桶的也包括被清理的）</span>
+  <span class="hljs-comment">#%GlobalTrashAddSum%为进入公共垃圾桶的物品总数</span>
+  <span class="hljs-attr">ChatMessageForCount:</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-number">60</span><span class="hljs-string">;&amp;d还剩下</span> <span class="hljs-number">60</span> <span class="hljs-string">秒清理物品和实体</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-number">30</span><span class="hljs-string">;&amp;d还剩下</span> <span class="hljs-number">30</span> <span class="hljs-string">秒清理物品和实体</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-number">10</span><span class="hljs-string">;&amp;d还剩下</span> <span class="hljs-number">10</span> <span class="hljs-string">秒清理物品和实体</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-number">5</span><span class="hljs-string">;&amp;c5秒</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-number">3</span><span class="hljs-string">;&amp;c3秒</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-number">2</span><span class="hljs-string">;&amp;c2秒</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-number">1</span><span class="hljs-string">;&amp;c1秒</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-number">0</span><span class="hljs-string">;&amp;a清理成功，有%DealItemSum%个物品被回收，有%GlobalTrashAddSum%个物品加入了公共垃圾桶，有%EntitySum%个生物被清理</span>
+    <span class="hljs-comment">#-1和-2是设置清理公共垃圾桶时的提醒，如果本次没有清理公共垃圾桶，则输出-1的提醒，如果本次清理公共垃圾桶，则输出-2的提醒</span>
+    <span class="hljs-comment">#该提醒是在清理垃圾后，延迟2秒发送的提醒</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-number">-1</span><span class="hljs-string">;&amp;d还有%ClearGlobalCount%次清理，公共垃圾桶</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-number">-2</span><span class="hljs-string">;&amp;a公共垃圾桶的物品已刷新</span>
+
+  <span class="hljs-comment">#是否启用提示音</span>
+  <span class="hljs-attr">SoundFlag:</span> <span class="hljs-literal">true</span>
+  <span class="hljs-comment">#提示音</span>
+  <span class="hljs-comment"># 提示音大全去这个网站里找</span>
+  <span class="hljs-comment"># https://minecraft.fandom.com/zh/wiki</span>
+  <span class="hljs-comment"># 下列格式 倒计时;提示音,音量,音调</span>
+  <span class="hljs-attr">SoundForCount:</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-number">5</span><span class="hljs-string">;entity.experience_orb.pickup,0.4,0.2</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-number">3</span><span class="hljs-string">;entity.experience_orb.pickup,0.4,0.4</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-number">2</span><span class="hljs-string">;entity.experience_orb.pickup,0.4,0.6</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-number">1</span><span class="hljs-string">;entity.experience_orb.pickup,0.4,0.8</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-number">0</span><span class="hljs-string">;entity.experience_orb.pickup,0.4,1</span>
+    <span class="hljs-comment">#-1和-2是设置清理公共垃圾桶时的提醒，如果本次没有清理公共垃圾桶，则输出-1的提醒，如果本次清理公共垃圾桶，则输出-2的提醒</span>
+    <span class="hljs-comment">#该提醒是在清理垃圾后，延迟2秒发送的提醒</span>
+<span class="hljs-comment">#    - -1;entity.experience_orb.pickup,1,0.6</span>
+<span class="hljs-comment">#    - -2;entity.experience_orb.pickup,1,0.6</span>
+
+  <span class="hljs-comment">#普通玩家能够创建的最大世界垃圾桶数量</span>
+  <span class="hljs-attr">DefaultRashCanMax:</span> <span class="hljs-number">3</span>
+  <span class="hljs-comment">#禁止玩家创建世界垃圾桶的世界</span>
+  <span class="hljs-attr">BanWorldNameList:</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-string">world</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-string">DIM-1</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-string">DIM1</span>
+<span class="hljs-comment">#所有世界垃圾桶的总黑名单(存在此表中的物品不会回收到世界垃圾桶里)</span>
+<span class="hljs-attr">GlobalBanItem:</span>
+  <span class="hljs-bullet">-</span> <span class="hljs-string">EGG</span>
+  <span class="hljs-bullet">-</span> <span class="hljs-string">DIRT</span>
+
+<span class="hljs-comment">#每个世界限制生物的数量(单世界空岛/家园推荐)</span>
+<span class="hljs-attr">WorldEntityLimitCount:</span>
+  <span class="hljs-comment">#这里可以彻底关闭这个功能的任何检查，与其他插件不同，这里的关闭是直接从服务器内部注销了监听器，是彻彻底底的关闭，想重新打开该功能只需重载也无需重启，重载即可，如果你不需要它的话，关闭后不会占用任何性能</span>
+  <span class="hljs-attr">Flag:</span> <span class="hljs-literal">false</span>
+  <span class="hljs-comment">#不受实体限制的世界</span>
+  <span class="hljs-comment"># 如果你这里想留空，请这样写 BanWorldNameList: []</span>
+  <span class="hljs-attr">BanWorldNameList:</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-string">world</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-string">DIM-1</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-string">DIM1</span>
+  <span class="hljs-attr">DefaultCount:</span>
+    <span class="hljs-comment">#一个世界最多多少个村民</span>
+    <span class="hljs-comment">#如果你想限制一个实体，请你用/WorldListTrashCan Look指令</span>
+    <span class="hljs-comment"># 如果你打开了这个功能，那这里留空是没有意义的，留空仍会依照默认配置- Villager;10 - Chicken;20</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-string">Villager;10</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-string">Chicken;20</span>
+
+<span class="hljs-comment">#密集实体清理功能</span>
+<span class="hljs-attr">GatherEntityLimitCount:</span>
+  <span class="hljs-comment">#这里可以彻底关闭这个功能的任何检查，与其他插件不同，这里的关闭是直接从服务器内部注销了监听器，是彻彻底底的关闭，想重新打开该功能只需重载也无需重启，重载即可，如果你不需要它的话，关闭后不会占用任何性能，关闭后不会占用任何性能</span>
+  <span class="hljs-attr">Flag:</span> <span class="hljs-literal">false</span>
+  <span class="hljs-comment">#密集清理时，系统清理的密集实体是否会掉落物品</span>
+  <span class="hljs-attr">ItemDropFlag:</span> <span class="hljs-literal">true</span>
+  <span class="hljs-comment">#不受实体聚集限制的世界</span>
+  <span class="hljs-comment"># 如果你这里想留空，请这样写 BanWorldNameList: []</span>
+  <span class="hljs-attr">BanWorldNameList:</span>
+   <span class="hljs-bullet">-</span> <span class="hljs-string">world</span>
+<span class="hljs-comment">#    - DIM-1</span>
+<span class="hljs-comment">#    - DIM1</span>
+  <span class="hljs-attr">DefaultCount:</span>
+    <span class="hljs-comment">#解析: 15格的范围内，只允许出现10只村民，清理其中的5只</span>
+    <span class="hljs-comment">#如果你想限制一个实体，请你用/WorldListTrashCan Look指令</span>
+    <span class="hljs-comment"># 如果你打开了这个功能，那这里留空是没有意义的，留空仍会依照默认配置- Villager;10;15;5</span>
+    <span class="hljs-comment"># 格式：实体类型;数量;范围;清理数量</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-string">Villager;10;15;5</span>
+<span class="hljs-comment">#    - Chicken;9;5;4</span>
+
+<span class="hljs-comment">#禁止刷屏/频繁使用指令</span>
+<span class="hljs-attr">ChatSet:</span>
+  <span class="hljs-attr">QuickSendMessage:</span>
+    <span class="hljs-comment">#这里可以彻底关闭这个功能的任何检查，与其他插件不同，这里的关闭是直接从服务器内部注销了监听器，是彻彻底底的关闭，想重新打开该功能只需重载也无需重启，重载即可，如果你不需要它的话，关闭后不会占用任何性能</span>
+    <span class="hljs-attr">Flag:</span> <span class="hljs-literal">true</span>
+    <span class="hljs-comment">#0.7秒允许发送一次聊天消息</span>
+    <span class="hljs-attr">Time:</span> <span class="hljs-number">0.7</span>
+    <span class="hljs-comment">#提醒语句</span>
+    <span class="hljs-attr">Message:</span> <span class="hljs-string">"&amp;c请不要刷屏"</span>
+  <span class="hljs-attr">QuickUseCommand:</span>
+    <span class="hljs-comment">#这里可以彻底关闭这个功能的任何检查，与其他插件不同，这里的关闭是直接从服务器内部注销了监听器，是彻彻底底的关闭，想重新打开该功能只需重载也无需重启，重载即可，如果你不需要它的话，关闭后不会占用任何性能</span>
+    <span class="hljs-attr">Flag:</span> <span class="hljs-literal">true</span>
+    <span class="hljs-comment">#0.7秒允许使用一次指令</span>
+    <span class="hljs-attr">Time:</span> <span class="hljs-number">0.7</span>
+    <span class="hljs-comment">#提醒语句</span>
+    <span class="hljs-attr">Message:</span> <span class="hljs-string">"&amp;c请不要频繁使用指令"</span>
+    <span class="hljs-comment">#指令白名单，如果在指令以下名单中，不受以上间隔时间限制</span>
+    <span class="hljs-attr">WhiteList:</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-string">/tpa</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-string">/spawn</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-string">/suicide</span>
+
+
+
+
+<span class="hljs-comment">#防丢弃功能</span>
+<span class="hljs-comment">#玩家如果有WorldListTrashCan.DropMode权限</span>
+<span class="hljs-comment">#输入/WorldListTrashCan DropMode指令开启防丢弃模式</span>
+<span class="hljs-attr">DropItemCheck:</span>
+  <span class="hljs-comment">#这里可以彻底关闭这个功能的任何检查，与其他插件不同，这里的关闭是直接从服务器内部注销了监听器，是彻彻底底的关闭，想重新打开该功能只需重载也无需重启，重载即可，如果你不需要它的话，关闭后不会占用任何性能</span>
+  <span class="hljs-attr">Flag:</span> <span class="hljs-literal">true</span>
+
+<span class="hljs-comment">#优化</span>
+<span class="hljs-attr">SimpleOptimize:</span>
+  <span class="hljs-comment">#是否在无法拾取的箭矢射到目标后直接清理</span>
+  <span class="hljs-comment">#如，无限附魔的弓射出的箭矢，以及骷髅射出的箭矢</span>
+  <span class="hljs-comment">#这里可以彻底关闭这个功能的任何检查，与其他插件不同，这里的关闭是直接从服务器内部注销了监听器，是彻彻底底的关闭，想重新打开该功能只需重载也无需重启，重载即可，如果你不需要它的话，关闭后不会占用任何性能</span>
+  <span class="hljs-attr">NotPickArrow:</span> <span class="hljs-literal">true</span>
+  <span class="hljs-comment">#禁止踩踏农田</span>
+  <span class="hljs-attr">NotTreadingFarmLand:</span> <span class="hljs-literal">true</span>
+
+<span class="hljs-comment">#以上功能绝大多数均为群友提出后 一 一 实现，进Q群923738709 提新功能需求</span>
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="command.html" class="navigation navigation-prev " aria-label="Previous page: 指令说明">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../../requirement/server.html" class="navigation navigation-next " aria-label="Next page: 服务端要求">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"配置说明","level":"2.1.2","depth":2,"next":{"title":"服务端要求","level":"3.1","depth":1,"path":"requirement/server.md","ref":"requirement/server.md","articles":[]},"previous":{"title":"指令说明","level":"2.1.1","depth":2,"path":"plugins/WorldTrashCan/command.md","ref":"plugins/WorldTrashCan/command.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","alerts","flexible-alerts"],"styles":{"website":"styles/website.css"},"pluginsConfig":{"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"flexible-alerts":{"style":"callout","note":{"label":"Note","icon":"fa fa-info-circle","className":"info"},"tip":{"label":"Tip","icon":"fa fa-lightbulb-o","className":"tip"},"warning":{"label":"Warning","icon":"fa fa-exclamation-triangle","className":"warning"},"danger":{"label":"Attention","icon":"fa fa-ban","className":"danger"},"comment":{"label":"Comment","icon":"fa fa-comments","className":"info"}},"chapter-fold":{},"alerts":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2}},"theme":"default","author":"Your Name","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"插件文档","language":"zh-hans","gitbook":"*","description":"Minecraft 插件文档中心"},"file":{"path":"plugins/WorldTrashCan/config.md","mtime":"2025-02-10T16:19:53.578Z","type":"markdown"},"gitbook":{"version":"4.0.8","time":"2025-02-10T16:20:02.140Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
