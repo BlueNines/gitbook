@@ -5,11 +5,20 @@
     "language": "zh-hans",
     "plugins": [
         "chapter-fold",
-        "alerts"
+        "alerts",
+        "flexible-alerts"
     ],
     "pluginsConfig": {
         "theme-default": {
             "showLevel": true
+        },
+        "flexible-alerts": {
+            "style": "callout",
+            "comment": {
+                "label": "Comment",
+                "icon": "fa fa-comments",
+                "className": "info"
+            }
         }
     },
     "styles": {
