@@ -4,12 +4,10 @@
 点击下方插件名称即可查看详细介绍
 :::
 
-## 基础插件
+## 插件列表
 | 插件名称 | 说明 | 版本 | 状态 |
 |---------|------|------|------|
-| [玩家公会](PlayerGuild/README.md) | 玩家公会插件 | 1.0.0 | <span style="color:#67C23A;">已发布</span> |
-| [计分板](ScoreBoard/README.md) | 计分板插件 | 1.0.0 | <span style="color:#67C23A;">已发布</span> |
-| [商店](Shop/README.md) | 商店插件 | 1.0.0 | <span style="color:#67C23A;">已发布</span> |
+| [WorldTrashCan](WorldTrashCan/README.md) | 优化管理清理插件 | 1.0.0 | <span style="color:#67C23A;">已发布</span> |
 
 ## 环境要求
 ::: warning 注意
@@ -24,5 +22,4 @@
 ### 前置插件
 | 名称 | 版本要求 | 说明 |
 |------|----------|------|
-| PlaceholderAPI | 2.10.0+ | 变量支持 |
-| Vault | 1.7.0+ | 经济支持 | 
+| PlaceholderAPI | 2.10.0+ | 变量支持（可选） | 

@@ -12,6 +12,8 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -25,6 +27,7 @@ jobs:
       - name: Build
         run: |
           npm run build
+          cp README.md _book/
           touch _book/.nojekyll
 
       - name: Deploy
@@ -33,4 +36,5 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./_book
           force_orphan: true
-          enable_jekyll: false 
+          enable_jekyll: false
+          commit_message: 'deploy: update documentation' 
