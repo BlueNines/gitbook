@@ -4,7 +4,9 @@
   "description": "Plugin Documentation",
   "main": "index.js",
   "scripts": {
+    "prebuild": "node -e \"if (require('fs').existsSync('_book')) require('fs').rmSync('_book', { recursive: true });\"",
     "build": "honkit build",
+    "postbuild": "touch _book/.nojekyll",
     "serve": "honkit serve"
   },
   "dependencies": {
